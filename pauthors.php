@@ -4,7 +4,7 @@
  */
 /*
 Plugin Name: Pauthors List
-Plugin URI: https://github.com/sinu-jose/pauthors
+Plugin URI: https://github.com/sinujose007/pauthors
 Description: Used for display list of contributors under selected post . To get started: activate the <b>Pauthors plugin</b> and then go to your edit post page to set up.
 Version: 1.0.0
 Author: Sinu Jose
