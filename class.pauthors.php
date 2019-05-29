@@ -38,13 +38,16 @@ class Pauthors {
 		
 		$value = get_post_meta( $post->ID, 'pauthorst', true );
 		
-		foreach ( $authors_list as $k=>$v ){
-			$each_user = $v->data;
-			$check = '';
-			if ( is_array ($value) && in_array( $each_user->ID, $value ) )
-				$check = 'checked';
-			echo '<span class="pauthor_each_opt"><input '. $check .'  type="checkbox" name="pauthorst[]" value="'.$each_user->ID.'" />'.$each_user->display_name.'</span><br/>';
-					
+		if( !empty( $authors_list ) ){
+			foreach ( $authors_list as $k=>$v ){
+				$each_user = $v->data;
+				$check = '';
+				if ( is_array ($value) && in_array( $each_user->ID, $value ) )
+					$check = 'checked';
+				echo '<span class="pauthor_each_opt"><input '. $check .'  type="checkbox" name="pauthorst[]" value="'.$each_user->ID.'" />'.$each_user->display_name.'</span><br/>';
+			}	
+		}else{
+			echo "No authors found in the site";
 		}
 	}
 	
